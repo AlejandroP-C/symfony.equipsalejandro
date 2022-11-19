@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %} <link href="{{ asset('css/dades_equip.css') }}" rel="stylesheet" /> {% endblock %}
+{% block title %}Equips{% endblock %}
+{% block body %}
+    {% if equip %}
+        {{ include ('equip.html.twig', { 'equip': equip }) }}
+    {% else %}
+        <h2 id="error">Equip no trobat</h2>
+        <img id="attention" class="uk-container uk-container-center" src="{{ asset('img/attention.png') }}">
+    {% endif %}
+{% endblock body %}

@@ -1,0 +1,23 @@
+h2#titolInici {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: .5px solid black;
+    width: 50%;
+    margin: 10px auto;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+p#paragrafInici {
+    width: 80%;
+    border: solid black 1px;
+    margin: 10px auto;
+    margin-top: 2%;
+    text-align: center;
+    padding: 10px;
+}
+
+.imatgeInici {
+    width: 300px;
+    margin: 10px;
+}

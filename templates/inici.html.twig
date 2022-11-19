@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Inici EquipsAlejandro{% endblock %}
+{% block stylesheets %} <link href="{{ asset('css/inici.css') }}" rel="stylesheet" /> {% endblock %}
+{% block body %}
+    <h2 id="titolInici">Projecte Symfony Equips 2n DAW</h2>
+    <p id="paragrafInici">Inici programa gestió d'equips i membres del projecte 2n DAW.</p>
+    <a href="{{ path('dades_equip', {'codi': 2}) }}">
+        <img class="uk-container uk-container-center uk-margin-large-top uk-margin-large-top imatgeInici" src="{{ asset('img/imatge_inici.png') }}">
+    </a>
+{% endblock %}
