@@ -1,39 +1,23 @@
 <?php
 
 namespace App\Controller;
+
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class EquipsController extends AbstractController
 {
-    private $equips = array(
-        array(
-            "codi" => "1", "nom" => "Equip Roig", "cicle" => "DAW",
-            "curs" => "22/23", "membres" =>
-            array("Elena", "Vicent", "Joan", "Maria")
-        ),
-        array(
-            "codi" => "2", "nom" => "Equip Groc", "cicle" => "DAW",
-            "curs" => "22/23", "membres" =>
-            array("Albert", "Alex", "Carles", "Gemma")
-        ),
-        array(
-            "codi" => "3", "nom" => "Equip Blau", "cicle" => "DAW",
-            "curs" => "22/23", "membres" =>
-            array("Júlia", "Raquel", "Raúl", "David")
-        ),
-        array(
-            "codi" => "4", "nom" => "Equip Verd", "cicle" => "DAW",
-            "curs" => "22/23", "membres" =>
-            array("Sandra", "Nerea", "Llorenç", "Josep")
-        )
 
-    );
+    private $equips;
+    public function __construct($dadesEquips)
+    {
+        $this->equips = $dadesEquips->get();
+    }
 
     /**
      * @Route("/equip/{codi}", name="dades_equip")
      */
-    public function fitxa($codi)
+    public function fitxa($codi=1)
     {
         $resultat = array_filter(
             $this->equips,
@@ -42,11 +26,11 @@ class EquipsController extends AbstractController
             }
         );
         if (count($resultat) > 0)
-            return $this->render('dades_equip.html.twig', array(
+            return $this->render('equip.html.twig', array(
                 'equip' => array_shift($resultat)
             ));
         else
-            return $this->render('dades_equip.html.twig', array(
+            return $this->render('equip.html.twig', array(
                 'equip' => NULL
             ));
     }

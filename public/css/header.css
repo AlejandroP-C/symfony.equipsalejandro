@@ -1,24 +1,21 @@
-.uk-logo {
-    width: 12.5%;
-}
-
-.logo_simarro {
-    width: 170px;
-    height: 25px;
-}
-
 .logo_symfony {
     width: 45px;
     height: 45px;
 }
 
 .uk-navbar-center {
-    padding: 0.75%;
+    padding: .75%;
     justify-content: space-between !important;
     width: 100%;
+    border-bottom: .5px solid #e2e2e2;
 }
 
 .button-group {
     display: flex;
     gap: 40px;
+}
+
+.button-group .uk-button {
+    border-radius: 25px;
+    width: 145px;
 }

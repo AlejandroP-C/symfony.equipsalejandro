@@ -24,28 +24,31 @@
     </head>
     <body>
 
-        <div class="uk-navbar-container" uk-navbar>
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">        
+        
+            <div class="uk-navbar-container" uk-navbar>
 
-            <div class="uk-navbar-center">
+                <div class="uk-navbar-center">
 
-                <div class="uk-navbar-item uk-logo uk-flex uk-flex-inline uk-flex-between">
-                    <img  src="{{ asset('img/logo_symfony.png') }}" class="rounded logo_symfony">
-                    <img  src="{{ asset('img/logo_simarro.png') }}" class="rounded logo_simarro">
+                    <div class="uk-navbar-item uk-logo uk-flex uk-flex-inline uk-flex-between">
+                        <img  src="{{ asset('img/logo_symfony.png') }}" class="rounded logo_symfony">
+                    </div>
+                    
+
+                    <div class="button-group">
+                        <a class="uk-button uk-button-default" href="{{ path('inici') }}">Inici</a>
+                        <a class="uk-button uk-button-default" href="{{ path('dades_equip') }}">Equips</a>
+                        <a class="uk-button uk-button-default" href="">#</a>
+                        <a class="uk-button uk-button-default" href="">#</a>
+                        <a class="uk-button uk-button-default" href="">#</a>
+                    </div>
+
+                    <div></div>
+
                 </div>
-                
-
-                <div class="button-group">
-                    <a class="uk-button uk-button-default" href="{{ path('inici') }}">Inici</a>
-                    <a class="uk-button uk-button-default" href="{{ path('dades_equip', {'codi': 1}) }}">Equips</a>
-                    <a class="uk-button uk-button-default" href="#">#</a>
-                    <a class="uk-button uk-button-default" href="#">#</a>
-                    <a class="uk-button uk-button-default" href="#">#</a>
-                </div>
-
-                <div></div>
 
             </div>
-
+        
         </div>
 
         {% block body %}{% endblock %}

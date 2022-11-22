@@ -18,6 +18,60 @@ p#paragrafInici {
 }
 
 .imatgeInici {
-    width: 300px;
-    margin: 10px;
+    width: 220px;
+    margin: 20px;
+}
+
+div#equips {
+    margin-top: 20px;
+    padding-bottom: 150px;
+}
+
+div#equips h3 {
+    text-decoration: underline;
+}
+
+div#equips:first-child {
+    padding-bottom: 150px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, .25);
+}
+
+div#equips a {
+    border-radius: 25px;
+}
+
+div#equips a.Roig:hover {
+    -webkit-box-shadow: 0 0 25px #cc251c;
+    box-shadow: 0 0 25px #cc251c;
+    text-decoration: none;
+    color: #494949;
+    border-radius: 25px;
+    transition: .4s;
+}
+
+div#equips a.Groc:hover {
+    -webkit-box-shadow: 0 0 25px #f2d12d;
+    box-shadow: 0 0 25px #f2d12d;
+    text-decoration: none;
+    color: #494949;
+    border-radius: 25px;
+    transition: .4s;
+}
+
+div#equips a.Blau:hover {
+    -webkit-box-shadow: 0 0 25px #0391d0;
+    box-shadow: 0 0 25px #0391d0;
+    text-decoration: none;
+    color: #494949;
+    border-radius: 25px;
+    transition: .4s;
+}
+
+div#equips a.Verd:hover {
+    -webkit-box-shadow: 0 0 25px #254f08;
+    box-shadow: 0 0 25px #254f08;
+    text-decoration: none;
+    color: #494949;
+    border-radius: 25px;
+    transition: .4s;
 }
