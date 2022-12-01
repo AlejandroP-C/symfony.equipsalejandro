@@ -38,6 +38,8 @@ div#equips:first-child {
 
 div#equips a {
     border-radius: 25px;
+    color: #494949;
+    text-decoration: none;
 }
 
 div#equips a.Roig:hover {
@@ -74,4 +76,25 @@ div#equips a.Verd:hover {
     color: #494949;
     border-radius: 25px;
     transition: .4s;
+}
+
+div.info {
+    display: inline-flex;
+    width: 30%;
+    margin: auto 33%;
+    text-align: center;
+    padding: 10px;
+    background-color: #d8eafc;
+    color: #1e87f0;
+    border-radius: 35px;
+}
+
+div.info > img {
+    height: 64px;
+    transform: scale(.6);
+    margin: 0 20px 0 15px;
+}
+
+div.info > p#missatge {
+    text-align: left;
 }

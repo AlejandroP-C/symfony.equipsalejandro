@@ -2,11 +2,11 @@
 
 {% block body %}    
 
-    <h3 id="titolEquip" class="uk-margin-large-top">Dades de l'equip {{ equip.codi }}</h3>
+    <h3 id="titolEquip" class="uk-margin-large-top">Dades de l'equip {{ equip.getId() }}</h3>
 
     <div class="uk-container uk-container-center uk-margin-large-top uk-overflow-auto">
 
-        <img class="uk-container uk-container-center uk-margin-large-bottom" src="{{ asset('img/' ~ equip.imatge) }}">
+        <img class="uk-container uk-container-center uk-margin-large-bottom" src="{{ asset('img/' ~ equip.getImatge()) }}">
 
         <table class="uk-table uk-table-divider">
     
@@ -16,15 +16,17 @@
                     <th>Equip</th>
                     <th>Cicle</th>
                     <th>Curs</th>
+                    <th>Nota</th>
                 </tr>
             </thead>
             
             <tbody>
                 <tr>
-                    <td>{{ equip.codi }}</td>
-                    <td>{{ equip.nom }}</td>
-                    <td>{{ equip.cicle }}</td>
-                    <td>{{ equip.curs }}</td>
+                    <td>{{ equip.getId() }}</td>
+                    <td>{{ equip.getNom() }}</td>
+                    <td>{{ equip.getCicle() }}</td>
+                    <td>{{ equip.getCurs() }}</td>
+                    <td>{{ equip.getNota() }}</td>
                 </tr>
 
             </tbody>
@@ -37,11 +39,11 @@
 
             <div class="uk-child-width-expand@s uk-text-center uk-margin-large-top" uk-grid>
 
-                {% for membre in equip.membres %}
+                {# {% for membre in equip.membres %}
                     <div>
                         <div class="uk-card uk-card-default uk-card-body">{{ membre }}</div>
                     </div>
-                {% endfor %}
+                {% endfor %} #}
 
             </div>
         

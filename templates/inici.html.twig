@@ -19,11 +19,24 @@
 
                 <div class="uk-child-width-expand@s uk-text-center uk-margin-large-top" uk-grid>
 
-                    {% for equip in equips %}
-                        <div>
-                            <a href="{{ path('dades_equip', {'codi': equip.codi}) }}" class="uk-card uk-card-default uk-card-body uk-card-hover {{equip.nom}}">{{ equip.nom }}</a>
+                    {% if error != NULL %}
+
+                        <div class="info">
+                            <img src="{{ asset('img/info.png') }}">
+                            <p id="missatge">{{error}}</p>
                         </div>
-                    {% endfor %}
+
+                    {% else %}
+                        
+                        {% for equip in equips %}
+                            <div>
+                                <a href="{{ path('dades_equip', {'codi': equip.getId()}) }}" class="uk-card uk-card-default uk-card-body uk-card-hover {{equip.getNom()}}">
+                                    {{ equip.getNom() }} <br> {{equip.getNota()}}
+                                </a>
+                            </div>
+                        {% endfor %}
+
+                    {% endif %}
 
                 </div>
             

@@ -1,0 +1,82 @@
+div.center {
+    margin-top: 2%;
+}
+
+ul a {
+    color: black;
+    text-decoration: none;
+}
+
+ul a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+div.alert {
+    display: inline-flex;
+    width: 35%;
+    margin: auto 31%;
+    margin-top: 15px;
+    text-align: center;
+    padding: 5px;
+    background-color: #fef4f6;
+    color: #f26882;
+    border-radius: 35px;
+}
+
+div.alert > img {
+    transform: scale(.6);
+    margin: 0 27px 0 25px;
+}
+
+div.info {
+    display: inline-flex;
+    width: 30%;
+    margin: auto 33%;
+    margin-top: 2%;
+    text-align: center;
+    padding: 10px;
+    background-color: #d8eafc;
+    color: #1e87f0;
+    border-radius: 35px;
+}
+
+div.info > img {
+    height: 64px;
+    transform: scale(.6);
+    margin: 5% 20px 0 15px;
+}
+
+div.info > p#missatge {
+    text-align: left;
+}
+
+div.success {
+    display: inline-flex;
+    width: 35%;
+    margin: auto 31%;
+    margin-top: 2%;
+    text-align: center;
+    padding: 5px;
+    background-color: #edfbf6;
+    color: #32d296;
+    border-radius: 35px;
+}
+
+div.success > img {
+    transform: scale(.6);
+    margin: 0 27px 0 25px;
+}
+
+li.uk-nav-header {
+    cursor: default;
+}
+
+@media (min-width: 2560px) {
+
+    div.info > img {
+        height: 64px;
+        transform: scale(.6);
+        margin: 2% 20px 0 15px;
+    }
+}

@@ -34,13 +34,41 @@
                         <img  src="{{ asset('img/logo_symfony.png') }}" class="rounded logo_symfony">
                     </div>
                     
-
                     <div class="button-group">
+
                         <a class="uk-button uk-button-default" href="{{ path('inici') }}">Inici</a>
-                        <a class="uk-button uk-button-default" href="{{ path('dades_equip') }}">Equips</a>
+
+                        <a class="uk-button uk-button-default" href="{{ path('dades_equip', {'codi': 1}) }}">Equips</a>
+
+                        <div class="uk-inline">
+
+                            <button class="uk-button uk-button-default" type="button">Dades</button>
+
+                            <div uk-dropdown="animation: reveal-top; animate-out: true; duration: 400">
+
+                                <ul class="uk-nav uk-dropdown-nav">
+
+                                    <div class="uk-inline">
+
+                                        <li class="uk-nav-header">Inserir</li>
+
+                                        <div uk-dropdown="animation: reveal-left; animate-out: true; duration: 400">
+
+                                            <ul class="uk-nav uk-dropdown-nav">
+
+                                                <li><a href="{{ path('inserir_equip') }}">Equip</a></li>
+                                                <li><a href="{{ path('inserir_multiples_equips') }}">Múltiples Equips</a></li>
+                                                <li><a href="{{ path('inserir_membre') }}">Membre</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+
                         <a class="uk-button uk-button-default" href="">#</a>
-                        <a class="uk-button uk-button-default" href="">#</a>
-                        <a class="uk-button uk-button-default" href="">#</a>
+
                     </div>
 
                     <div></div>

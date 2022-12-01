@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %} <link href="{{ asset('css/inserir_equip.css') }}" rel="stylesheet" /> {% endblock %}
+{% block title %}Inserir{% endblock %}
+{% block body %}
+
+    <div class="center">
+    
+        {% if error == NULL %}
+            
+            <div class="success">
+                <img src="{{ asset('img/success.png') }}">
+                <p>Equip {{equip.id}} amb nom {{equip.nom}} inserit correctament</p>
+            </div>
+            
+        {% else %}
+
+            <div class="alert">
+                <img src="{{ asset('img/error.png') }}">
+                <p>Error amb la inserció de l'equip {{equip}}</p>
+            </div>
+
+            <div class="info">
+                <img src="{{ asset('img/info.png') }}">
+                <p id="missatge">{{error}}</p>
+            </div>
+
+        {% endif %}
+    
+    </div>
+
+{% endblock body %}
